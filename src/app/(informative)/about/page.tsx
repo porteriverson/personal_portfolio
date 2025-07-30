@@ -7,7 +7,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'About | Porter Iverson', // This title will appear when on the About Us page
-  description: 'Learn more about our company and mission.',
+  description: 'Learn more about my journey so far and the experiences that have shaped me.',
 };
 
 
@@ -36,7 +36,7 @@ export default function About() {
       icon: "trophy",
       title: "BYU Soccer",
       dateTime: "2023-Present",
-      description: "Teamwork, Unity, Brotherhood. Competing at the highest level and winning back to back National Championships.",
+      description: "Competing at the highest level and winning back to back National Championships requires teamwork, unity, brotherhood and more. I am now one of the captains of the team, planning and preparing win another national chapmionship in November.",
     },
     {
       id: "Information-Systems", // Unique ID
@@ -44,7 +44,7 @@ export default function About() {
       icon: "shopping_cart",
       title: "Master of Information Systems Management",
       dateTime: "2023-Present",
-      description: "Teamwork, Unity, Brotherhood. Competing at the highest level and winning back to back National Championships.",
+      description: "Studying daily to sharpen my skills in web development, business anaytics, software engineering,  and product management. I am thrilled to ",
     },
   ];
 

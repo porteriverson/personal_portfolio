@@ -1,6 +1,6 @@
 // components/TimelineItem.tsx
 import React from 'react';
-import { Flag, LucideBell, LucideFlag, LucidePackage, LucideShoppingCart, LucideTrophy } from 'lucide-react'; // Assuming you're using lucide-react for icons
+import { LucideBell, LucideFlag, LucidePackage, LucideShoppingCart, LucideTrophy } from 'lucide-react'; // Assuming you're using lucide-react for icons
 
 // Define the interface for TimelineItem's props
 export interface TimelineItemProps {
