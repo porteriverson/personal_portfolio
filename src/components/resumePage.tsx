@@ -134,7 +134,7 @@ const ResumePage = () => {
             <div>
               <h4 className="font-semibold text-lg mb-1">Leadership Roles</h4>
               <li>Student Body President, Fremont High School</li>
-              <li>3x Captain of High School Varsity Soccer Team</li>
+              <li>3 time Captain of High School Varsity Soccer Team</li>
               <li>Captain of BYU Men&apos;s Soccer Team</li>
             </div>
             <div>
