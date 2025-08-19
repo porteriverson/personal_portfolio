@@ -1,17 +1,19 @@
 'use client';
 import React, { useState } from 'react';
+import Image from 'next/image';
+import ContactModal from './ContactModal'; // Import the new component
 
 // Main ResumePage component
 const ResumePage = () => {
-      // State to control the visibility of the contact modal
+  // State to control the visibility of the contact modal
   const [showContactModal, setShowContactModal] = useState(false);
 
   // Define your contact details
   const contactDetails = {
-    email: 'porteriverson93@gmail.com', // Replace with your email
-    phone: '801-823-7731', // Replace with your phone number
-    linkedin: 'https://linkedin.com/in/porteriverson', // Replace with your LinkedIn profile
-    github: 'https://github.com/', // Replace with your GitHub profile
+    email: 'porteriverson93@gmail.com',
+    phone: '801-823-7731',
+    linkedin: 'https://linkedin.com/in/porteriverson',
+    github: 'https://github.com/porteriverson',
   };
 
   // Function to handle opening the modal
@@ -25,21 +27,33 @@ const ResumePage = () => {
   };
 
   return (
-    // Main container for the resume, centered and with responsive padding
     <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 p-4 sm:p-6 lg:p-8 flex justify-center items-start">
       <div className="w-full max-w-4xl bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 sm:p-8 lg:p-10 my-8">
 
         {/* Header Section */}
-        <header className="text-center mb-4">
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-indigo-700 dark:text-indigo-400 mb-2">Porter Iverson</h1>
-          <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300">Business Analyst | Web Developer | Innovator</p>
-          <div className="flex justify-center space-x-4 mt-4 text-sm sm:text-base">
-            <a href={`mailto:${contactDetails.email}`} className="text-indigo-600 dark:text-indigo-300 hover:underline">PorterIverson93@gmail.com</a>
-            <a href={`tel:${contactDetails.phone}`} className="text-indigo-600 dark:text-indigo-300 hover:underline">801-823-7731</a>
-            <a href={contactDetails.linkedin} target="_blank" rel="noopener noreferrer" className="text-indigo-600 dark:text-indigo-300 hover:underline">LinkedIn</a>
-            <a href={contactDetails.github} target="_blank" rel="noopener noreferrer" className="text-indigo-600 dark:text-indigo-300 hover:underline">GitHub</a>
+        <header className="flex justify-between items-center mb-4">
+          {/* Left-aligned text container */}
+          <div className="flex-1">
+            <h1 className="text-4xl sm:text-5xl font-extrabold text-indigo-700 dark:text-indigo-400 mb-2">Porter Iverson</h1>
+            <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300">Business Analyst | Web Developer | Innovator</p>
+            <div className="flex space-x-4 mt-4 text-sm sm:text-base">
+              <a href={`mailto:${contactDetails.email}`} className="text-indigo-600 dark:text-indigo-300 hover:underline">PorterIverson93@gmail.com</a>
+              <a href={`tel:${contactDetails.phone}`} className="text-indigo-600 dark:text-indigo-300 hover:underline">801-823-7731</a>
+              <a href={contactDetails.linkedin} target="_blank" rel="noopener noreferrer" className="text-indigo-600 dark:text-indigo-300 hover:underline">LinkedIn</a>
+            </div>
+            <button onClick={openContactModal} className="dark:bg-indigo-400 rounded-full p-4 mt-4">Contact Me</button>
           </div>
-          <button onClick={openContactModal} className="dark:bg-indigo-400 rounded-full p-4 mt-4">Contact Me</button>
+
+          {/* Right-aligned image container */}
+          <div className="ml-8">
+            <Image
+              src="/Iverson,Porter.png"
+              alt="Porter Iverson's headshot"
+              width={300}
+              height={300}
+              className="rounded-full object-cover"
+            />
+          </div>
         </header>
 
         {/* Horizontal Rule for separation */}
@@ -107,11 +121,11 @@ const ResumePage = () => {
             </div>
             <div>
               <h4 className="font-semibold text-lg mb-1">Frontend:</h4>
-              <p>React, Next.js, HTML5, CSS3, Tailwind CSS</p>
+              <p>React, Next.js, HTML, CSS, Tailwind CSS</p>
             </div>
             <div>
               <h4 className="font-semibold text-lg mb-1">Backend:</h4>
-              <p>Node.js, Express.js, RESTful APIs</p>
+              <p>Node.js, Express.js, RESTful APIs, Supabase</p>
             </div>
             <div>
               <h4 className="font-semibold text-lg mb-1">Databases:</h4>
@@ -150,55 +164,14 @@ const ResumePage = () => {
             </div>
           </div>
         </section>
-
       </div>
-      {showContactModal && (
-        <div className="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-50 p-4">
-          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl p-6 sm:p-8 w-full max-w-sm relative">
-            {/* Close button */}
-            <button
-              onClick={closeContactModal}
-              className="absolute top-3 right-3 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 text-2xl font-bold"
-              aria-label="Close"
-            >
-              &times;
-            </button>
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6 text-center">Contact Porter</h2>
-            <div className="flex flex-col space-y-4">
-              <a
-                href={`mailto:${contactDetails.email}`}
-                onClick={closeContactModal}
-                className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-4 rounded-md text-center transition-colors duration-200"
-              >
-                Email
-              </a>
-              <a
-                href={`sms:${contactDetails.phone}`}
-                onClick={closeContactModal}
-                className="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-4 rounded-md text-center transition-colors duration-200"
-              >
-                Text
-              </a>
-              <a
-                href={`tel:${contactDetails.phone}`}
-                onClick={closeContactModal}
-                className="bg-purple-500 hover:bg-purple-600 text-white font-semibold py-3 px-4 rounded-md text-center transition-colors duration-200"
-              >
-                Call
-              </a>
-              <a
-                href={contactDetails.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={closeContactModal}
-                className="bg-blue-700 hover:bg-blue-800 text-white font-semibold py-3 px-4 rounded-md text-center transition-colors duration-200"
-              >
-                LinkedIn
-              </a>
-            </div>
-          </div>
-        </div>
-      )}
+
+      {/* Use the new component */}
+      <ContactModal
+        show={showContactModal}
+        onClose={closeContactModal}
+        contactDetails={contactDetails}
+      />
     </div>
   );
 };

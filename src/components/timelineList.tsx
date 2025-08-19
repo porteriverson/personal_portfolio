@@ -1,32 +1,35 @@
-// components/TimelineList.js
+'use client';
 import React from 'react';
 import TimelineItem from './timelineItem';
-import type {TimelineItemProps} from './timelineItem';
+import type { TimelineItemProps } from './timelineItem';
 
 interface TimelineListProps {
   title: string;
   items: TimelineItemProps[];
+  onButtonClick?: () => void;
 }
 
-const TimelineList: React.FC<TimelineListProps> = ({ title, items }) => {
+const TimelineList: React.FC<TimelineListProps> = ({ items, onButtonClick }) => {
   return (
-    <ol className="relative border-l-2 border-gray-200">
-      {/* The main vertical line is created by the left border of this ordered list */}
-      <li>
-        <h4>{title}</h4>
-      </li>
-      {items.map((item) => (
-        <TimelineItem
-          key={item.id} 
-          id={item.id}// Important for React list rendering
-          icon={item.icon}
-          color={item.color}
-          title={item.title}
-          description={item.description}
-          dateTime={item.dateTime}
-        />
-      ))}
-    </ol>
+    <div className="flex justify-center w-full">
+      <ol className="relative max-w-4xl">
+        {items.map((item, index) => (
+          <TimelineItem
+            key={item.id}
+            id={item.id}
+            icon={item.icon}
+            color={item.color}
+            title={item.title}
+            description={item.description}
+            dateTime={item.dateTime}
+            buttonText={item.buttonText}
+            imageUrl={item.imageUrl}
+            onButtonClick={onButtonClick}
+            index={index}
+          />
+        ))}
+      </ol>
+    </div>
   );
 };
 
