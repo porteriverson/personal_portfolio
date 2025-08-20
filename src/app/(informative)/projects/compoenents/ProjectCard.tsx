@@ -15,7 +15,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onCardClick }) => {
       className="relative overflow-hidden rounded-xl shadow-lg cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl"
     >
       <Image
-        src={project.image}
+        src={project.images[0]}
         alt={project.title}
         width={800}
         height={400}
