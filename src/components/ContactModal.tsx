@@ -1,64 +1,68 @@
-'use client'; // This component needs to be a Client Component
+'use client';
 
 import React from 'react';
 
-// Define the props for the ContactModal component
 interface ContactModalProps {
   show: boolean;
   onClose: () => void;
-  contactDetails: {
-    email: string;
-    phone: string;
-    linkedin: string;
-  };
 }
 
-const ContactModal: React.FC<ContactModalProps> = ({ show, onClose, contactDetails }) => {
-  // If `show` is false, don't render anything
+const ContactModal: React.FC<ContactModalProps> = ({ show, onClose }) => {
+  // A simple way to obfuscate and de-obfuscate strings
+  const obf = (str: string) => {
+    return str.split('').reverse().join('');
+  };
+
+  // Storing obfuscated details
+  const obfuscatedDetails = {
+    email: 'moc.liamg@39nosreviretrop',
+    phone: '1377-328-108',
+    linkedin: 'nosreviretrop/ni/moc.nideknil//:sptth',
+  };
+
   if (!show) {
     return null;
   }
 
   return (
-    <div className="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-50 p-4">
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl p-6 sm:p-8 w-full max-w-sm relative">
-        {/* Close button */}
+    <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
+      <div className="bg-[#141a1a] rounded-lg shadow-xl p-6 sm:p-8 w-full max-w-sm relative">
         <button
           onClick={onClose}
-          className="absolute top-3 right-3 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 text-2xl font-bold"
+          className="absolute top-3 right-3 text-[#ed7b49] hover:text-white text-2xl font-bold"
           aria-label="Close"
         >
           &times;
         </button>
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6 text-center">Contact Porter</h2>
+        <h2 className="text-2xl font-bold text-[#ed7b49] mb-6 text-center">Contact Porter</h2>
         <div className="flex flex-col space-y-4">
           <a
-            href={`mailto:${contactDetails.email}`}
+            href={`mailto:${obf(obfuscatedDetails.email)}`}
             onClick={onClose}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-4 rounded-md text-center transition-colors duration-200"
+            className="bg-[#ed7b49] hover:bg-white hover:text-black text-white font-semibold py-3 px-4 rounded-md text-center transition-colors duration-200"
           >
             Email
           </a>
           <a
-            href={`sms:${contactDetails.phone}`}
+            href={`sms:${obf(obfuscatedDetails.phone)}`}
             onClick={onClose}
-            className="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-4 rounded-md text-center transition-colors duration-200"
+            className="bg-[#ed7b49] hover:bg-white hover:text-black text-white font-semibold py-3 px-4 rounded-md text-center transition-colors duration-200"
           >
             Text
           </a>
           <a
-            href={`tel:${contactDetails.phone}`}
+            href={`tel:${obf(obfuscatedDetails.phone)}`}
             onClick={onClose}
-            className="bg-purple-500 hover:bg-purple-600 text-white font-semibold py-3 px-4 rounded-md text-center transition-colors duration-200"
+            className="bg-[#ed7b49] hover:bg-white hover:text-black text-white font-semibold py-3 px-4 rounded-md text-center transition-colors duration-200"
           >
             Call
           </a>
           <a
-            href={contactDetails.linkedin}
+            href={obf(obfuscatedDetails.linkedin)}
             target="_blank"
             rel="noopener noreferrer"
             onClick={onClose}
-            className="bg-blue-700 hover:bg-blue-800 text-white font-semibold py-3 px-4 rounded-md text-center transition-colors duration-200"
+            className="bg-[#ed7b49] hover:bg-white hover:text-black text-white font-semibold py-3 px-4 rounded-md text-center transition-colors duration-200"
           >
             LinkedIn
           </a>

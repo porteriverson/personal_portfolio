@@ -1,10 +1,10 @@
+// timelineList.tsx
 'use client';
 import React from 'react';
 import TimelineItem from './timelineItem';
 import type { TimelineItemProps } from './timelineItem';
 
 interface TimelineListProps {
-  title: string;
   items: TimelineItemProps[];
   onButtonClick?: () => void;
 }

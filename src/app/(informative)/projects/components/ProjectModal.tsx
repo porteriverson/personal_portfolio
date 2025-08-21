@@ -27,13 +27,13 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
 
   return (
     // Modal Overlay
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black  p-4 md:p-8">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70 p-4 md:p-8">
       {/* Modal Content */}
-      <div className="relative bg-white rounded-xl shadow-2xl w-full max-w-6xl max-h-[90vh] overflow-y-auto transform transition-all duration-300 scale-100 opacity-100">
+      <div className="relative bg-[#2a2f2f] rounded-xl shadow-2xl w-full max-w-6xl max-h-[90vh] overflow-y-auto transform transition-all duration-300 scale-100 opacity-100">
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-10 text-white hover:text-gray-300 transition-colors"
+          className="absolute top-4 right-4 z-10 text-white hover:text-gray-400 transition-colors"
           aria-label="Close modal"
         >
           <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -79,36 +79,37 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
           <div className="absolute bottom-4 left-4 text-white p-2">
             <h2 className="text-3xl md:text-4xl font-extrabold">{project.title}</h2>
+            <p className="rounded-full bg-[#ed7b49] justify-center flex text-md md:text-lg">{project.type} Project</p>
             <p className="text-md md:text-lg">{project.timeframe}</p>
           </div>
         </div>
         
         {/* Modal Body */}
-        <div className="p-6 md:p-8 space-y-6 text-gray-700">
+        <div className="p-6 md:p-8 space-y-6 text-gray-400">
           <div>
-            <h3 className="text-2xl font-bold mb-2 text-gray-900">Project Overview</h3>
+            <h3 className="text-2xl font-bold mb-2 text-white">Project Overview</h3>
             <p className="text-md">{project.description}</p>
           </div>
           {/* My contributions to the group for the group project */}
           {project.type === 'Group' && project.contributions && (
             <div>
-              <h3 className="text-2xl font-bold mb-2 text-gray-900">My Contributions</h3>
+              <h3 className="text-2xl font-bold mb-2 text-white">My Contributions</h3>
               <p className="text-md">{project.contributions}</p>
             </div>
           )}
           {/* Key elements for personal project */}
           {project.type === 'Personal' && project.contributions && (
             <div>
-              <h3 className="text-2xl font-bold mb-2 text-gray-900">Key Elements</h3>
+              <h3 className="text-2xl font-bold mb-2 text-white">Key Elements</h3>
               <p className="text-md">{project.contributions}</p>
             </div>
           )}
 
           <div>
-            <h3 className="text-2xl font-bold mb-2 text-gray-900">Technologies Used</h3>
+            <h3 className="text-2xl font-bold mb-2 text-white">Technologies Used</h3>
             <div className="flex flex-wrap gap-2">
               {project.technologies.map((tech, index) => (
-                <span key={index} className="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">
+                <span key={index} className="bg-[#202525] text-white px-3 py-1 rounded-full text-sm font-medium">
                   {tech}
                 </span>
               ))}
@@ -120,7 +121,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
               href={project.demoLink || '#'}
               target={project.demoLink ? '_blank' : '_self'}
               rel="noopener noreferrer"
-              className="flex-1 text-center bg-blue-600 text-white font-semibold py-3 px-6 rounded-full hover:bg-blue-700 transition-colors duration-200"
+              className="flex-1 text-center bg-[#ed7b49] text-white font-semibold py-3 px-6 rounded-full hover:bg-opacity-80 transition-colors duration-200"
             >
               {project.demoLink ? 'Live Demo' : 'Recorded Demo'}
             </a>
@@ -128,7 +129,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
               href={project.repoLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 text-center bg-gray-800 text-white font-semibold py-3 px-6 rounded-full hover:bg-gray-700 transition-colors duration-200"
+              className="flex-1 text-center bg-[#202525] text-white font-semibold py-3 px-6 rounded-full hover:bg-opacity-80 transition-colors duration-200"
             >
               View Code
             </a>

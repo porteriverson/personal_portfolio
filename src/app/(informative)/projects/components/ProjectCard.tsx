@@ -12,7 +12,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onCardClick }) => {
   return (
     <div
       onClick={() => onCardClick(project)}
-      className="relative overflow-hidden rounded-xl shadow-lg cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl"
+      className="relative overflow-hidden rounded-xl bg-[#2a2f2f] shadow-lg cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl"
     >
       <Image
         src={project.images[0]}

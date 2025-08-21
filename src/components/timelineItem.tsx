@@ -1,3 +1,4 @@
+// timelineItem.tsx
 'use client';
 import React from 'react';
 import { LucideBell, LucideFlag, LucidePackage, LucideShoppingCart, LucideTrophy } from 'lucide-react';
@@ -22,6 +23,7 @@ const colorMap: Record<string, string> = {
   error: 'bg-red-500 border-red-500',
   success: 'bg-green-500 border-green-500',
   blue: 'bg-blue-500 border-blue-500',
+  '#ed7b49': 'bg-[#ed7b49] border-[#ed7b49]',
 };
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -63,17 +65,17 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ icon, color, title, descrip
       </div>
 
       {/* Content Card with optional button */}
-      <div className={`p-4 bg-white rounded-lg shadow-md w-full flex-1 sm:w-1/2 ${isOdd ? 'sm:mr-7' : 'sm:ml-7'}`}>
-        <h4 className="font-semibold text-lg text-gray-800 mb-1">{title}</h4>
-        <span className="text-xs font-medium text-gray-800">{dateTime}</span>
-        <p className="text-sm text-gray-600 mb-2">{description}</p>
+      <div className={`p-4 bg-[#141a1a] rounded-lg shadow-md w-full flex-1 sm:w-1/2 text-white ${isOdd ? 'sm:mr-7' : 'sm:ml-7'}`}>
+        <h4 className="font-semibold text-lg text-white mb-1">{title}</h4>
+        <span className="text-xs font-medium text-gray-400">{dateTime}</span>
+        <p className="text-sm text-gray-300 mb-2">{description}</p>
         
         {/* Button to contact me */}
         {buttonText && onButtonClick && (
-          <div className="mt-4 flex justify-end">
+          <div className="mt-4 flex justify-center">
             <button
               onClick={onButtonClick}
-              className="bg-indigo-600 text-white font-semibold py-2 px-4 rounded-md hover:bg-indigo-700 transition-colors duration-200"
+              className="bg-[#ed7b49] text-white font-semibold py-2 px-4 rounded-md hover:bg-orange-700 transition-colors duration-200"
             >
               {buttonText}
             </button>

@@ -18,9 +18,9 @@ const ProjectsPage: React.FC = () => {
   };
 
   return (
-    <div className="bg-gray-100 min-h-screen p-8 font-sans">
+    <div className="bg-[#141a1a] min-h-screen p-8 font-sans pt-24">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-extrabold text-center text-gray-900 mb-12">
+        <h1 className="text-4xl md:text-5xl font-extrabold text-center text-white mb-12">
           My Projects
         </h1>
         
