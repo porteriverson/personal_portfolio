@@ -64,9 +64,9 @@ const ResumePage = () => {
             <p className="text-md sm:text-lg text-gray-400">Office of Information Technology | Provo, UT</p>
             <p className="text-sm sm:text-base text-gray-500 mb-2">May 2025 – Present</p>
             <ul className="list-disc list-inside text-gray-300 space-y-1">
-              <li></li>
-              <li></li>
-              <li></li>
+              <li>Visualize data to produce insights and make data driven decision</li>
+              <li>Build dashboards to assist the budgeting for all technology assets for 5 higher education institutions</li>
+              <li>Solve abstract problems by asking detailed questions and working closely with management</li>
             </ul>
           </div>
 
@@ -76,9 +76,20 @@ const ResumePage = () => {
             <p className="text-md sm:text-lg text-gray-400"></p>
             <p className="text-sm sm:text-base text-gray-500 mb-2">November 2024 – Present</p>
             <ul className="list-disc list-inside text-gray-300 space-y-1">
-              <li>Scaled multiple projects to support small businesses from caterers to tutors using React and Supabase</li>
-              <li>Designed and built complete functionality for tour guides to take groups of 100+ high school students on international tours</li>
-              <li>Participated in agile development cycles, including sprint planning, daily stand-ups, and retrospectives.</li>
+              <li>Scaled multiple projects to support small businesses from <a href="/projects" className="hover:underline no-underline text-[#ed7b49]">caterers</a> to <a href="/projects" className="hover:underline no-underline text-[#ed7b49]">tutors</a>, increased quote requests by 80%</li>
+              <li>Designed and built complete functionality for <a href="/projects" className="hover:underline no-underline text-[#ed7b49]">tour guides</a> to manage groups of 100+ high school students on international travel tours</li>
+              <li>Participated in agile development cycles, including sprint planning, daily stand-ups, and retrospectives</li>
+            </ul>
+          </div>
+
+          {/* Experience Item 3 */}
+          <div className="mb-6 last:mb-0">
+            <h3 className="text-xl sm:text-2xl font-semibold text-white">Systems Manager/Producer</h3>
+            <p className="text-md sm:text-lg text-gray-400">The Insurance Center | Farr West, UT</p>
+            <p className="text-sm sm:text-base text-gray-500 mb-2">May 2024 – August 2025</p>
+            <ul className="list-disc list-inside text-gray-300 space-y-1">
+              <li>50% increase of prospective clients reached through email and text automation</li>
+              <li>Articulate complex insurance information to clients while quoting and selling policies</li>
             </ul>
           </div>
         </section>

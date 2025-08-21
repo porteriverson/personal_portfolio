@@ -37,7 +37,7 @@ const HomePage: React.FC = () => {
             <div className="relative w-full max-w-sm md:max-w-md h-64 md:h-80 bg-[#2a2f2f] rounded-full shadow-lg overflow-hidden transform transition-transform duration-500 hover:scale-105">
               {/* This is a placeholder for your image */}
               <div className="absolute inset-0 flex items-center justify-center text-gray-500 text-sm p-4 text-center">
-                <Image src="/Iverson,Porter.png" alt="Porter Iverson" layout="fill" objectFit="cover" className="rounded-md" />
+                <Image src="/Iverson,Porter.png" alt="Porter Iverson" layout="fill" objectFit="cover" className="rounded-none" />
               </div>
             </div>
           </div>
