@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const HomePage: React.FC = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-[#141a1a] text-white font-sans p-4 sm:p-8">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-[#141a1a] text-white font-sans p-4 sm:p-8 pt-24">
       {/* Main Content Container - Centered and max-w for readability */}
       <div className="max-w-6xl w-full">
         {/* Hero Section - Revamped with Split Layout */}
@@ -35,7 +35,6 @@ const HomePage: React.FC = () => {
           <div className="md:w-1/2 flex justify-center animate-fade-in-down">
             {/* Replace this div with your actual Next.js Image component */}
             <div className="relative w-full max-w-sm md:max-w-md h-64 md:h-80 bg-[#2a2f2f] rounded-full shadow-lg overflow-hidden transform transition-transform duration-500 hover:scale-105">
-              {/* This is a placeholder for your image */}
               <div className="absolute inset-0 flex items-center justify-center text-gray-500 text-sm p-4 text-center">
                 <Image src="/Iverson,Porter.png" alt="Porter Iverson" layout="fill" objectFit="cover" className="rounded-none" />
               </div>
