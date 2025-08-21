@@ -3,8 +3,8 @@
 import React, { useState } from 'react';
 import { Project } from './types/project';
 import { projectsData } from './data/projectData';
-import ProjectCard from './compoenents/ProjectCard';
-import ProjectModal from './compoenents/ProjectModal';
+import ProjectCard from './components/ProjectCard';
+import ProjectModal from './components/ProjectModal';
 
 const ProjectsPage: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
