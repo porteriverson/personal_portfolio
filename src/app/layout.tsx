@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
+import { Analytics } from "@vercel/analytics/next"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,14 +15,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Porter Iverson",
+  title: "Porter Iverson | Portfolio",
   description: "See my latest projects, resume and more.",
   openGraph: {
     url: 'https://porteriverson.com',
-    siteName: 'Porter Iverson',
+    siteName: 'Porter Iverson | Portfolio',
     images: [
       {
-        url: 'https://ugsqqbopiurqmwxivwgs.supabase.co/storage/v1/object/public/portfolio-pics/logo.png',
+        url: 'https://ugsqqbopiurqmwxivwgs.supabase.co/storage/v1/object/public/portfolio-pics/Social%20Sharing%20Image-2.png',
         width: 1200,
         height: 1200,
       },
@@ -45,6 +46,7 @@ export default function RootLayout({
           <Navbar />
         </div>
         {children}
+        <Analytics />
       </body>
     </html>
   );

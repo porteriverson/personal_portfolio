@@ -57,7 +57,7 @@ export const projectsData: Project[] = [
     description: 'Worked with my brother to build a discord bot that gets premier league matches from an API and allows users to predict the outcomes. After the matches are played, the bot updates the users with the results and their prediction accuracy. I built the machine learning model to predict the match outcomes based on a variety of features.',
     technologies: ['Python', 'Scikit-learn', 'RESTful API'],
     demoLink: '#',
-    repoLink: '#',
+    repoLink: 'https://github.com/jaceiverson/pl-discord-bot.git',
     type: 'Group',
     contributions: 'Developed a machine learning model to predict match outcomes based on 12 features, working on integrating it with the discord bot.',
   },
@@ -71,6 +71,6 @@ export const projectsData: Project[] = [
     video: 'https://drive.google.com/drive/folders/1AQwP5cdbPartuxt8e0nGiapGEoDRHHyu?usp=share_link',
     repoLink: 'https://github.com/Jburton175/INTEX.git',
     type: 'Group',
-    contributions: 'Database Normalization, Data Visualizations, UI Design, ',
+    contributions: 'Database Normalization, Data Visualizations, UI Design, CRUD with Node.js and Express',
   },
 ];
