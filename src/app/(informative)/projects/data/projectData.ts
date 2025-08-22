@@ -33,7 +33,7 @@ export const projectsData: Project[] = [
     description: 'A frontend website for wedding catering business. They had no previous online presence as they were launching their business. In the first summer, this site Increased their quote requests by 80%',
     technologies: ['TypeScript', 'React', 'Tailwind CSS', 'EmailJS', "Vercel"],
     demoLink: 'https://doughneys.com',
-    repoLink: 'https://github.com/porteriverson/donuts.git',
+    // repoLink: 'https://github.com/porteriverson/donuts.git',
     type: 'Personal',
     contributions: 'Integrated EmailJS for contact form functionality, Accordion FAQ section, Image Carousel, Responsive Design, SEO Optimization',
   },

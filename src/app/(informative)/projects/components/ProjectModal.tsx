@@ -125,6 +125,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
             >
               {project.demoLink ? 'Live Demo' : 'Recorded Demo'}
             </a>
+            {project.repoLink && 
             <a
               href={project.repoLink}
               target="_blank"
@@ -133,6 +134,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
             >
               View Code
             </a>
+            }
           </div>
         </div>
       </div>

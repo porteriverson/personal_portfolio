@@ -7,7 +7,7 @@ export interface Project {
   description: string;
   technologies: string[];
   demoLink?: string;
-  repoLink: string;
+  repoLink?: string;
   type: 'Personal' | 'Group'; 
   contributions?: string; 
   video?: string;
