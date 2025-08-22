@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { Mail, Linkedin, Github } from 'lucide-react';
 
 interface ContactModalProps {
   show: boolean;
@@ -16,8 +17,8 @@ const ContactModal: React.FC<ContactModalProps> = ({ show, onClose }) => {
   // Storing obfuscated details
   const obfuscatedDetails = {
     email: 'moc.liamg@39nosreviretrop',
-    phone: '1377-328-108',
     linkedin: 'nosreviretrop/ni/moc.nideknil//:sptth',
+    github: 'nosreviretrop/moc.buhtig//:sptth',
   };
 
   if (!show) {
@@ -29,7 +30,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ show, onClose }) => {
       <div className="bg-[#141a1a] rounded-lg shadow-xl p-6 sm:p-8 w-full max-w-sm relative">
         <button
           onClick={onClose}
-          className="absolute top-3 right-3 text-[#ed7b49] hover:text-white text-2xl font-bold"
+          className="absolute top-3 right-3 hover:text-[#ed7b49] text-white text-2xl font-bold"
           aria-label="Close"
         >
           &times;
@@ -39,32 +40,30 @@ const ContactModal: React.FC<ContactModalProps> = ({ show, onClose }) => {
           <a
             href={`mailto:${obf(obfuscatedDetails.email)}`}
             onClick={onClose}
-            className="bg-[#ed7b49] hover:bg-white hover:text-black text-white font-semibold py-3 px-4 rounded-md text-center transition-colors duration-200"
+            className="hover:bg-[#ed7b49] bg-white text-black hover:text-white font-semibold py-3 px-4 rounded-md text-center transition-colors duration-200 flex items-center justify-center space-x-2"
           >
-            Email
-          </a>
-          <a
-            href={`sms:${obf(obfuscatedDetails.phone)}`}
-            onClick={onClose}
-            className="bg-[#ed7b49] hover:bg-white hover:text-black text-white font-semibold py-3 px-4 rounded-md text-center transition-colors duration-200"
-          >
-            Text
-          </a>
-          <a
-            href={`tel:${obf(obfuscatedDetails.phone)}`}
-            onClick={onClose}
-            className="bg-[#ed7b49] hover:bg-white hover:text-black text-white font-semibold py-3 px-4 rounded-md text-center transition-colors duration-200"
-          >
-            Call
+            <Mail size={20} />
+            <span>Email</span>
           </a>
           <a
             href={obf(obfuscatedDetails.linkedin)}
             target="_blank"
             rel="noopener noreferrer"
             onClick={onClose}
-            className="bg-[#ed7b49] hover:bg-white hover:text-black text-white font-semibold py-3 px-4 rounded-md text-center transition-colors duration-200"
+            className="hover:bg-[#ed7b49] bg-white text-black hover:text-white font-semibold py-3 px-4 rounded-md text-center transition-colors duration-200 flex items-center justify-center space-x-2"
           >
-            LinkedIn
+            <Linkedin size={20} />
+            <span>LinkedIn</span>
+          </a>
+          <a
+            href={obf(obfuscatedDetails.github)}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={onClose}
+            className="hover:bg-[#ed7b49] bg-white text-black hover:text-white font-semibold py-3 px-4 rounded-md text-center transition-colors duration-200 flex items-center justify-center space-x-2"
+          >
+            <Github size={20} />
+            <span>GitHub</span>
           </a>
         </div>
       </div>

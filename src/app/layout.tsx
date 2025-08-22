@@ -16,6 +16,19 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Porter Iverson",
   description: "See my latest projects, resume and more.",
+  openGraph: {
+    url: 'https://porteriverson.com',
+    siteName: 'Porter Iverson',
+    images: [
+      {
+        url: 'https://ugsqqbopiurqmwxivwgs.supabase.co/storage/v1/object/public/portfolio-pics/logo.png',
+        width: 1200,
+        height: 1200,
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({

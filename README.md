@@ -1,10 +1,5 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Personal Portfolio website to demonstrate the current projects, my resume, and some defining moments of my life so far. 
 
-## Learn More
+Built using next.js, typescript, tailwindcss, and react components
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Pretty basic and mostly to get my name out there. My contact details are on here but obfuscated to avoid web scrapers slamming me. 

@@ -19,7 +19,7 @@ const ResumePage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white p-4 sm:p-6 lg:p-8 flex justify-center items-start pt-24">
+    <div className="min-h-screen bg-black text-white p-4 sm:p-6 lg:p-8 flex justify-center items-start pt-24 lg:pt-32 md:pt-24">
       <div className="w-full max-w-4xl bg-[#141a1a] shadow-lg rounded-lg p-6 sm:p-8 lg:p-10 my-8">
 
         {/* Header Section */}

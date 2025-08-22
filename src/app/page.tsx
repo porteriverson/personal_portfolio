@@ -10,7 +10,7 @@ const HomePage: React.FC = () => {
         {/* Hero Section - Revamped with Split Layout */}
         <header className="mb-12 md:mb-16 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-16">
           {/* Text Content - Animated */}
-          <div className="md:w-1/2 text-center md:text-left animate-fade-in-up">
+          <div className="md:w-1/2 text-center sm:text-left animate-fade-in-up">
             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight mb-4 text-white">
               Nice to meet you, I&apos;m{" "}
               <span className="text-[#ed7b49]">Porter</span>.
@@ -21,7 +21,7 @@ const HomePage: React.FC = () => {
               to solve problems and improve lives.
             </p>
             {/* Scannable list of links */}
-            <ul className="mt-6 text-gray-400 text-lg md:text-xl space-y-2">
+            <ul className="mt-6 text-gray-400 text-lg md:text-xl space-y-2 ">
               <li className="transition-colors duration-300">
                 Check out{" "}
                 <a
