@@ -21,14 +21,31 @@ const ResumePage = () => {
   return (
     <div className="min-h-screen bg-black text-white p-4 sm:p-6 lg:p-8 flex justify-center items-start pt-24 lg:pt-32 md:pt-24">
       <div className="w-full max-w-4xl bg-[#141a1a] shadow-lg rounded-lg p-6 sm:p-8 lg:p-10 my-8">
-
         {/* Header Section */}
         <header className="flex justify-between items-center mb-4">
           {/* Left-aligned text container */}
           <div className="flex-1">
-            <h1 className="text-4xl sm:text-5xl font-extrabold text-[#ed7b49] mb-2">Porter Iverson</h1>
-            <p className="text-lg sm:text-xl text-gray-400">Business Analyst | Web Developer | Innovator</p>
-            <button onClick={openContactModal} className="bg-[#ed7b49] text-white rounded-full px-6 py-3 mt-4">Contact Me</button>
+            <h1 className="text-4xl sm:text-5xl font-extrabold text-[#ed7b49] mb-2">
+              Porter Iverson
+            </h1>
+            <p className="text-lg sm:text-xl text-gray-400">
+              Business Analyst | Web Developer | Innovator
+            </p>
+            <div className="flex gap-3 mt-4">
+              <button
+                onClick={openContactModal}
+                className="bg-[#ed7b49] text-white rounded-full px-6 py-3 hover:bg-[#d66a3a] transition-colors"
+              >
+                Contact Me
+              </button>
+              <a
+                href="/Porter_Iverson_Resume_2025.pdf"
+                download="Porter_Iverson_Resume_2025.pdf"
+                className="bg-gray-700 text-white rounded-full px-6 py-3 hover:bg-gray-600 transition-colors inline-flex items-center"
+              >
+                Download as PDF
+              </a>
+            </div>
           </div>
 
           {/* Right-aligned image container */}
@@ -48,73 +65,160 @@ const ResumePage = () => {
 
         {/* Summary Section */}
         <section className="mt-4 mb-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#ed7b49] mb-4">Summary</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#ed7b49] mb-4">
+            Summary
+          </h2>
           <p className="text-base sm:text-lg leading-relaxed text-gray-300">
-            I am an enthusiastic MISM student at BYU. My academic journey has equipped me with foundational understanding of software engineering, web development, and product management, areas where I am eager to make a significant impact. With a strong analytical mindset, I am interested in finding solutions to everyday problems. I am excited to explore opportunities where I can blend my skills and passion to make a difference in the world.
+            I am an enthusiastic MISM student at BYU. My academic journey has
+            equipped me with foundational understanding of software engineering,
+            web development, and product management, areas where I am eager to
+            make a significant impact. With a strong analytical mindset, I am
+            interested in finding solutions to everyday problems. I am excited
+            to explore opportunities where I can blend my skills and passion to
+            make a difference in the world.
           </p>
         </section>
 
         {/* Experience Section */}
         <section className="mb-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#ed7b49] mb-4">Experience</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#ed7b49] mb-4">
+            Experience
+          </h2>
 
           {/* Experience Item 1 */}
           <div className="mb-6 last:mb-0">
-            <h3 className="text-xl sm:text-2xl font-semibold text-white">Student Business Analyst</h3>
-            <p className="text-md sm:text-lg text-gray-400">Office of Information Technology | Provo, UT</p>
-            <p className="text-sm sm:text-base text-gray-500 mb-2">May 2025 – Present</p>
+            <h3 className="text-xl sm:text-2xl font-semibold text-white">
+              Student Business Analyst
+            </h3>
+            <p className="text-md sm:text-lg text-gray-400">
+              Office of Information Technology | Provo, UT
+            </p>
+            <p className="text-sm sm:text-base text-gray-500 mb-2">
+              May 2025 – Present
+            </p>
             <ul className="list-disc list-inside text-gray-300 space-y-1">
-              <li>Visualize data to produce insights and make data driven decision</li>
-              <li>Build dashboards to assist the budgeting for all technology assets for 5 higher education institutions</li>
-              <li>Solve abstract problems by asking detailed questions and working closely with management</li>
+              <li>
+                Visualize data to produce insights and make data driven decision
+              </li>
+              <li>
+                Build dashboards to assist the budgeting for all technology
+                assets for 5 higher education institutions
+              </li>
+              <li>
+                Solve abstract problems by asking detailed questions and working
+                closely with management
+              </li>
             </ul>
           </div>
 
           {/* Experience Item 2 */}
           <div className="mb-6 last:mb-0">
-            <h3 className="text-xl sm:text-2xl font-semibold text-white">Freelance Web Developer</h3>
+            <h3 className="text-xl sm:text-2xl font-semibold text-white">
+              Freelance Web Developer
+            </h3>
             <p className="text-md sm:text-lg text-gray-400"></p>
-            <p className="text-sm sm:text-base text-gray-500 mb-2">November 2024 – Present</p>
+            <p className="text-sm sm:text-base text-gray-500 mb-2">
+              November 2024 – Present
+            </p>
             <ul className="list-disc list-inside text-gray-300 space-y-1">
-              <li>Scaled multiple projects to support small businesses from <a href="/projects" className="hover:underline no-underline text-[#ed7b49]">caterers</a> to <a href="/projects" className="hover:underline no-underline text-[#ed7b49]">tutors</a>, increased quote requests by 80%</li>
-              <li>Designed and built complete functionality for <a href="/projects" className="hover:underline no-underline text-[#ed7b49]">tour guides</a> to manage groups of 100+ high school students on international travel tours</li>
-              <li>Participated in agile development cycles, including sprint planning, daily stand-ups, and retrospectives</li>
+              <li>
+                Scaled multiple projects to support small businesses from{" "}
+                <a
+                  href="/projects"
+                  className="hover:underline no-underline text-[#ed7b49]"
+                >
+                  caterers
+                </a>{" "}
+                to{" "}
+                <a
+                  href="/projects"
+                  className="hover:underline no-underline text-[#ed7b49]"
+                >
+                  tutors
+                </a>
+                , increased quote requests by 80%
+              </li>
+              <li>
+                Designed and built complete functionality for{" "}
+                <a
+                  href="/projects"
+                  className="hover:underline no-underline text-[#ed7b49]"
+                >
+                  tour guides
+                </a>{" "}
+                to manage groups of 100+ high school students on international
+                travel tours
+              </li>
+              <li>
+                Participated in agile development cycles, including sprint
+                planning, daily stand-ups, and retrospectives
+              </li>
             </ul>
           </div>
 
           {/* Experience Item 3 */}
           <div className="mb-6 last:mb-0">
-            <h3 className="text-xl sm:text-2xl font-semibold text-white">Systems Manager/Producer</h3>
-            <p className="text-md sm:text-lg text-gray-400">The Insurance Center | Farr West, UT</p>
-            <p className="text-sm sm:text-base text-gray-500 mb-2">May 2024 – August 2025</p>
+            <h3 className="text-xl sm:text-2xl font-semibold text-white">
+              Systems Manager/Producer
+            </h3>
+            <p className="text-md sm:text-lg text-gray-400">
+              The Insurance Center | Farr West, UT
+            </p>
+            <p className="text-sm sm:text-base text-gray-500 mb-2">
+              May 2024 – August 2025
+            </p>
             <ul className="list-disc list-inside text-gray-300 space-y-1">
-              <li>50% increase of prospective clients reached through email and text automation</li>
-              <li>Articulate complex insurance information to clients while quoting and selling policies</li>
+              <li>
+                50% increase of prospective clients reached through email and
+                text automation
+              </li>
+              <li>
+                Articulate complex insurance information to clients while
+                quoting and selling policies
+              </li>
             </ul>
           </div>
         </section>
 
         {/* Education Section */}
         <section className="mb-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#ed7b49] mb-4">Education</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#ed7b49] mb-4">
+            Education
+          </h2>
           <div className="mb-6 last:mb-0">
-            <h3 className="text-xl sm:text-2xl font-semibold text-white">Master of Information Systems Management</h3>
-            <p className="text-md sm:text-lg text-gray-400">Brigham Young University | Provo, UT</p>
-            <p className="text-sm sm:text-base text-gray-500">September 2025 – April 2027</p>
+            <h3 className="text-xl sm:text-2xl font-semibold text-white">
+              Master of Information Systems Management
+            </h3>
+            <p className="text-md sm:text-lg text-gray-400">
+              Brigham Young University | Provo, UT
+            </p>
+            <p className="text-sm sm:text-base text-gray-500">
+              September 2025 – April 2027
+            </p>
           </div>
           <div className="mb-6 last:mb-0">
-            <h3 className="text-xl sm:text-2xl font-semibold text-white">Bachelor of Science in Information Systems</h3>
-            <p className="text-md sm:text-lg text-gray-400">Brigham Young University | Provo, UT</p>
-            <p className="text-sm sm:text-base text-gray-500">September 2023 – April 2027</p>
+            <h3 className="text-xl sm:text-2xl font-semibold text-white">
+              Bachelor of Science in Information Systems
+            </h3>
+            <p className="text-md sm:text-lg text-gray-400">
+              Brigham Young University | Provo, UT
+            </p>
+            <p className="text-sm sm:text-base text-gray-500">
+              September 2023 – April 2027
+            </p>
           </div>
         </section>
 
         {/* Skills Section */}
         <section>
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#ed7b49] mb-4">Skills</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#ed7b49] mb-4">
+            Skills
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-gray-300">
             <div>
-              <h4 className="font-semibold text-lg mb-1">Programming Languages:</h4>
+              <h4 className="font-semibold text-lg mb-1">
+                Programming Languages:
+              </h4>
               <p> Python, JavaScript, TypeScript, SQL</p>
             </div>
             <div>
@@ -141,7 +245,9 @@ const ResumePage = () => {
         </section>
         {/* Additional Experiences */}
         <section>
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#ed7b49] mb-4">Additional Experience</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#ed7b49] mb-4">
+            Additional Experience
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-gray-300">
             <div>
               <h4 className="font-semibold text-lg mb-1">Leadership Roles</h4>
@@ -165,10 +271,7 @@ const ResumePage = () => {
       </div>
 
       {/* Use the new component */}
-      <ContactModal
-        show={showContactModal}
-        onClose={closeContactModal}
-      />
+      <ContactModal show={showContactModal} onClose={closeContactModal} />
     </div>
   );
 };
