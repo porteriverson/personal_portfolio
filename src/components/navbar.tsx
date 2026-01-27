@@ -12,6 +12,10 @@ const Navbar = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const pathname = usePathname();
 
+  // Hide navbar on privacy policy page
+  if (pathname === '/elephrend/privacy') {
+    return null;
+  }
 
   // Array of navigation links.
   const navLinks = [
