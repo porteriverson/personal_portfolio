@@ -12,11 +12,6 @@ const Navbar = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const pathname = usePathname();
 
-  // Hide navbar on privacy policy page
-  if (pathname === '/elephrend/privacy') {
-    return null;
-  }
-
   // Array of navigation links.
   const navLinks = [
     { name: 'Home', icon: Home, href: '/' },
@@ -44,6 +39,11 @@ const Navbar = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [handleScroll]);
+
+  // Hide navbar on privacy policy page
+  if (pathname === '/elephrend/privacy') {
+    return null;
+  }
 
   return (
     <nav className={`fixed w-full z-50 bg-[#141a1a] bg-opacity-90 backdrop-blur-sm shadow-xl border-b border-[#2a2f2f] p-4 transition-transform duration-300 ease-in-out ${showNavbar ? 'translate-y-0' : '-translate-y-full'}`}>

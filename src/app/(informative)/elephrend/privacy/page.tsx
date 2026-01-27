@@ -26,7 +26,7 @@ export default function PrivacyPolicyPage() {
               • Privacy-First Design: Your data is encrypted and stored locally on your device
             </li>
             <li className="pl-2">
-              • Minimal Data Collection: We only collect what's necessary to provide the service
+              • Minimal Data Collection: We only collect what&apos;s necessary to provide the service
             </li>
             <li className="pl-2">
               • Anonymization: Personal data is anonymized before AI processing
@@ -214,7 +214,7 @@ export default function PrivacyPolicyPage() {
           </li>
         </ul>
 
-        <h2 className="text-xl font-bold text-white mt-6 mb-3">7. Children's Privacy</h2>
+        <h2 className="text-xl font-bold text-white mt-6 mb-3">7. Children&apos;s Privacy</h2>
         <ul className="space-y-2 text-[15px] leading-[22px] text-gray-300 mb-4">
           <li className="pl-2">• The App is not intended for children under 13</li>
           <li className="pl-2">
