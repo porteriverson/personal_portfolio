@@ -40,8 +40,12 @@ const Navbar = () => {
     };
   }, [handleScroll]);
 
-  // Hide navbar on privacy policy and support pages
-  if (pathname === '/elephrend/privacy' || pathname === '/elephrend/support') {
+  // Hide navbar on Elephrend utility pages
+  if (
+    pathname === '/elephrend/privacy' ||
+    pathname === '/elephrend/support' ||
+    pathname === '/elephrend/welcome'
+  ) {
     return null;
   }
 
