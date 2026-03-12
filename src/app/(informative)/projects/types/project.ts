@@ -2,13 +2,14 @@
 export interface Project {
   id: number;
   title: string;
-  timeframe: string;
+  startDate: string;
+  endDate?: string | "Present";
   images: string[]; 
   description: string;
   technologies: string[];
   demoLink?: string;
   repoLink?: string;
-  type: 'Personal' | 'Group'; 
+  type: 'Personal' | 'Group' | 'Professional'; 
   contributions?: string; 
   video?: string;
 }

@@ -1,8 +1,9 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Project } from '../types/project';
+import { formatProjectTimeframe } from '../utils/projectDates';
 
 interface ProjectModalProps {
   project: Project | null;
@@ -12,8 +13,14 @@ interface ProjectModalProps {
 const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
+  useEffect(() => {
+    if (!project) return;
+    setCurrentImageIndex(0);
+  }, [project]);
+
   if (!project) return null;
 
+  const timeframe = formatProjectTimeframe(project);
 
   const nextImage = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % project.images.length);
@@ -52,13 +59,12 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
         </button>
 
         {/* Modal Header with Image Carousel */}
-        <div className="relative w-full h-[60vh] md:h-[60vh] sm:min-h-[40vh]">
+        <div className="relative flex h-[50vh] min-h-[20rem] w-full items-center justify-center overflow-hidden rounded-t-xl bg-[#202525] md:h-[60vh]">
           <Image
             src={project.images[currentImageIndex]}
             alt={project.title}
-            layout="fill"
-            objectFit="cover"
-            className="rounded-t-xl"
+            fill
+            className="rounded-t-xl object-contain p-4"
             priority
           />
 
@@ -108,7 +114,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
             </>
           )}
 
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/70 to-transparent"></div>
           <div className="absolute bottom-4 left-4 text-white p-2">
             <h2 className="text-3xl md:text-4xl font-extrabold">
               {project.title}
@@ -116,7 +122,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
             <p className="rounded-full bg-[#ed7b49] justify-center flex text-md md:text-lg">
               {project.type} Project
             </p>
-            <p className="text-md md:text-lg">{project.timeframe}</p>
+            <p className="text-md md:text-lg">{timeframe}</p>
           </div>
         </div>
 
