@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { FolderOpen, FileText, User, Home, Menu, X } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image'; // Import the Image component
+import { hiddenChromeRoutes, siteNavLinks } from './siteConfig';
 
 // Navbar component definition.
 const Navbar = () => {
@@ -11,14 +12,17 @@ const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const pathname = usePathname();
-
-  // Array of navigation links.
-  const navLinks = [
-    { name: 'Home', icon: Home, href: '/' },
-    { name: 'Projects', icon: FolderOpen, href: '/projects' },
-    { name: 'Resume', icon: FileText, href: '/resume' },
-    { name: 'About', icon: User, href: '/about' },
-  ];
+  const navLinks = siteNavLinks.map((link) => ({
+    ...link,
+    icon:
+      link.name === 'Home'
+        ? Home
+        : link.name === 'Projects'
+          ? FolderOpen
+          : link.name === 'Resume'
+            ? FileText
+            : User,
+  }));
 
   // Function to handle the scroll behavior
   const handleScroll = React.useCallback(() => {
@@ -41,11 +45,7 @@ const Navbar = () => {
   }, [handleScroll]);
 
   // Hide navbar on Elephrend utility pages
-  if (
-    pathname === '/elephrend/privacy' ||
-    pathname === '/elephrend/support' ||
-    pathname === '/elephrend/welcome'
-  ) {
+  if (hiddenChromeRoutes.includes(pathname as (typeof hiddenChromeRoutes)[number])) {
     return null;
   }
 

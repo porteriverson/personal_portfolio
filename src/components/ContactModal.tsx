@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Mail, Linkedin, Github } from 'lucide-react';
+import { siteContactLinks } from './siteConfig';
 
 interface ContactModalProps {
   show: boolean;
@@ -9,18 +10,6 @@ interface ContactModalProps {
 }
 
 const ContactModal: React.FC<ContactModalProps> = ({ show, onClose }) => {
-  // A simple way to obfuscate and de-obfuscate strings
-  const obf = (str: string) => {
-    return str.split('').reverse().join('');
-  };
-
-  // Storing obfuscated details
-  const obfuscatedDetails = {
-    email: 'moc.liamg@39nosreviretrop',
-    linkedin: 'nosreviretrop/ni/moc.nideknil//:sptth',
-    github: 'nosreviretrop/moc.buhtig//:sptth',
-  };
-
   if (!show) {
     return null;
   }
@@ -38,7 +27,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ show, onClose }) => {
         <h2 className="text-2xl font-bold text-[#ed7b49] mb-6 text-center">Contact Porter</h2>
         <div className="flex flex-col space-y-4">
           <a
-            href={`mailto:${obf(obfuscatedDetails.email)}`}
+            href={siteContactLinks.email}
             onClick={onClose}
             className="hover:bg-[#ed7b49] bg-white text-black hover:text-white font-semibold py-3 px-4 rounded-md text-center transition-colors duration-200 flex items-center justify-center space-x-2"
           >
@@ -46,7 +35,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ show, onClose }) => {
             <span>Email</span>
           </a>
           <a
-            href={obf(obfuscatedDetails.linkedin)}
+            href={siteContactLinks.linkedin}
             target="_blank"
             rel="noopener noreferrer"
             onClick={onClose}
@@ -56,7 +45,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ show, onClose }) => {
             <span>LinkedIn</span>
           </a>
           <a
-            href={obf(obfuscatedDetails.github)}
+            href={siteContactLinks.github}
             target="_blank"
             rel="noopener noreferrer"
             onClick={onClose}

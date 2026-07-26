@@ -127,10 +127,10 @@ const rawProjectsData: Project[] = [
     startDate: "2025-12-01",
     endDate: "Present",
     images: [
-      "https://vxxoyghhxvuwltfkegva.supabase.co/storage/v1/object/public/portfolio-photos/elephrend-settings.jpeg",
-      "https://vxxoyghhxvuwltfkegva.supabase.co/storage/v1/object/public/portfolio-photos/elephrend-record.jpeg",
       "https://vxxoyghhxvuwltfkegva.supabase.co/storage/v1/object/public/portfolio-photos/elephrend-ideas.jpeg",
+      "https://vxxoyghhxvuwltfkegva.supabase.co/storage/v1/object/public/portfolio-photos/elephrend-record.jpeg",
       "https://vxxoyghhxvuwltfkegva.supabase.co/storage/v1/object/public/portfolio-photos/elephrend-contact-detail.jpeg",
+      "https://vxxoyghhxvuwltfkegva.supabase.co/storage/v1/object/public/portfolio-photos/elephrend-settings.jpeg",
     ],
     description:
       "A mobile app that solves a personal problem. Elephrend helps me remember important details about the people I care about. This is a voice-first personal CRM that generates gift ideas, interaction summaries, and special event reminders/messages so you never miss a special occasion. Currently being beta tested in iOS TestFlight.",
@@ -179,12 +179,33 @@ const rawProjectsData: Project[] = [
       "https://vxxoyghhxvuwltfkegva.supabase.co/storage/v1/object/public/portfolio-photos/temple-scheduler-1.png",
       "https://vxxoyghhxvuwltfkegva.supabase.co/storage/v1/object/public/portfolio-photos/temple-scheduler-2.png",
     ],
-    description: "A chrome extension to ",
-    technologies: ["React"],
-    video: "",
+    description:
+      "A chrome extension to quickly scan multiple temples for availability. The current system has multiple clicks to check 1 temple. With nearly 6 or more temples in my area, this extension saves me a lot of clicks and time when trying to schedule temple visits. Built in 3 hours with codex.",
+    technologies: [ "API Reverse Engineering", "Network Tools"],
+    // video: "",
     // repoLink: "",
     type: "Personal",
     contributions: "",
+  },
+  {
+    id: 10,
+    title: "Heyits",
+    startDate: "2026-02-28",
+    images: [
+      "https://vxxoyghhxvuwltfkegva.supabase.co/storage/v1/object/public/portfolio-photos/heyits-1.png",
+      "https://vxxoyghhxvuwltfkegva.supabase.co/storage/v1/object/public/portfolio-photos/heyits-2.png",
+      "https://vxxoyghhxvuwltfkegva.supabase.co/storage/v1/object/public/portfolio-photos/heyits-3.png",
+      "https://vxxoyghhxvuwltfkegva.supabase.co/storage/v1/object/public/portfolio-photos/heyits-4.png",
+      "https://vxxoyghhxvuwltfkegva.supabase.co/storage/v1/object/public/portfolio-photos/heyits-5.png",
+      "https://vxxoyghhxvuwltfkegva.supabase.co/storage/v1/object/public/portfolio-photos/heyits-6.png",
+      "https://vxxoyghhxvuwltfkegva.supabase.co/storage/v1/object/public/portfolio-photos/heyits-7.png",
+    ],
+    description: "A Hackathon project to eliminate the friction of journaling. Heyits connects to your calendar and sends you a daily prompt to make a quick journal entry for the day. The end product would be publishable as a book. Exporting as a PDF was the main distribution feature that was actually built in the 24 hour hackathon.",
+    technologies: ["React", "TypeScript", "Nextjs", "Supabase", "Vercel", "Google Calendar", ],
+    video:
+      "https://drive.google.com/file/d/1wL5sPemqiJfTKudfR7ViDDURllUMTxQ4/view?usp=sharing",
+    type: "Group",
+    contributions: "I managed the AI system that generated code for this project.",
   },
 ];
 
