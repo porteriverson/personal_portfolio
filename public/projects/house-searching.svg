@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">House Search Ranker</title>
+  <desc id="desc">A ranked list of homes beside an illustrated house.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#10251f"/>
+      <stop offset="1" stop-color="#18382f"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7f4ea"/>
+      <stop offset="1" stop-color="#e8e1cf"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#07100d" flood-opacity=".45"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="675" fill="url(#background)"/>
+  <path d="M0 530c230-95 430-85 612 5 180 88 370 82 588-25v165H0z" fill="#245446"/>
+  <circle cx="1044" cy="110" r="190" fill="#f4b860" opacity=".12"/>
+  <g transform="translate(92 96)">
+    <text fill="#fffdf7" font-family="ui-sans-serif, system-ui, sans-serif" font-size="68" font-weight="800">House Search</text>
+    <text y="76" fill="#f4b860" font-family="ui-sans-serif, system-ui, sans-serif" font-size="68" font-weight="800">Ranker</text>
+    <text y="133" fill="#c8d9d2" font-family="ui-sans-serif, system-ui, sans-serif" font-size="24">Turn a crowded listing feed into a shortlist.</text>
+    <g transform="translate(0 188)" filter="url(#shadow)">
+      <rect width="500" height="270" rx="24" fill="url(#card)"/>
+      <text x="30" y="42" fill="#315c4e" font-family="ui-sans-serif, system-ui, sans-serif" font-size="16" font-weight="800" letter-spacing="2">TOP MATCHES</text>
+      <g font-family="ui-sans-serif, system-ui, sans-serif">
+        <circle cx="50" cy="91" r="21" fill="#315c4e"/><text x="50" y="98" text-anchor="middle" fill="#fff" font-size="19" font-weight="800">1</text>
+        <text x="88" y="87" fill="#17231f" font-size="20" font-weight="700">Great value · 4 bed · 0.31 acre</text>
+        <text x="88" y="111" fill="#63736d" font-size="15">40 points · $176 / sqft</text>
+        <line x1="30" y1="133" x2="470" y2="133" stroke="#c9c1ae"/>
+        <circle cx="50" cy="170" r="21" fill="#76998c"/><text x="50" y="177" text-anchor="middle" fill="#fff" font-size="19" font-weight="800">2</text>
+        <text x="88" y="166" fill="#17231f" font-size="20" font-weight="700">Below estimate · 3 bed · 2 bath</text>
+        <text x="88" y="190" fill="#63736d" font-size="15">35 points · $184 / sqft</text>
+        <line x1="30" y1="212" x2="470" y2="212" stroke="#c9c1ae"/>
+        <circle cx="50" cy="249" r="21" fill="#a3b9b0"/><text x="50" y="256" text-anchor="middle" fill="#fff" font-size="19" font-weight="800">3</text>
+        <text x="88" y="247" fill="#17231f" font-size="20" font-weight="700">Best lot size · 4 bed · 2 bath</text>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(728 190)" filter="url(#shadow)">
+    <path d="M38 184L216 44l178 140v254H38z" fill="#f7f4ea"/>
+    <path d="M0 190L216 20l216 170-34 43L216 91 34 233z" fill="#d97941"/>
+    <rect x="78" y="248" width="112" height="91" rx="8" fill="#9fc9cf"/>
+    <path d="M134 248v91M78 294h112" stroke="#f7f4ea" stroke-width="8"/>
+    <rect x="260" y="238" width="92" height="200" rx="7" fill="#315c4e"/>
+    <circle cx="330" cy="340" r="7" fill="#f4b860"/>
+    <rect x="26" y="420" width="380" height="28" rx="14" fill="#173a30"/>
+    <g transform="translate(300 87)">
+      <rect x="0" y="0" width="42" height="88" fill="#f7f4ea"/>
+      <rect x="-8" y="-8" width="58" height="18" rx="5" fill="#315c4e"/>
+    </g>
+  </g>
+</svg>

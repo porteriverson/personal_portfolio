@@ -31,6 +31,12 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
   };
 
   const showNavigationButtons = project.images.length > 1;
+  const demoLink =
+    project.demoLink && project.demoLink !== '#'
+      ? project.demoLink
+      : undefined;
+  const videoLink = project.video || undefined;
+  const hasProjectLinks = Boolean(demoLink || videoLink || project.repoLink);
 
   return (
     // Modal Overlay
@@ -122,6 +128,11 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
             <p className="rounded-full bg-[#ed7b49] justify-center flex text-md md:text-lg">
               {project.type} Project
             </p>
+            {project.status && (
+              <p className="mt-2 text-sm font-semibold uppercase tracking-wider text-gray-200">
+                {project.status}
+              </p>
+            )}
             <p className="text-md md:text-lg">{timeframe}</p>
           </div>
         </div>
@@ -134,20 +145,12 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
             </h3>
             <p className="text-md">{project.description}</p>
           </div>
-          {/* My contributions to the group for the group project */}
-          {project.type === "Group" && project.contributions && (
+          {project.contributions && (
             <div>
               <h3 className="text-2xl font-bold mb-2 text-white">
-                My Contributions
-              </h3>
-              <p className="text-md">{project.contributions}</p>
-            </div>
-          )}
-          {/* Key elements for personal project */}
-          {project.type === "Personal" && project.contributions && (
-            <div>
-              <h3 className="text-2xl font-bold mb-2 text-white">
-                Key Elements
+                {project.type === 'Personal'
+                  ? 'Key Elements'
+                  : 'My Contributions'}
               </h3>
               <p className="text-md">{project.contributions}</p>
             </div>
@@ -169,26 +172,32 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row gap-4">
-            <a
-              href={project.demoLink || project.video || "#"}
-              target={project.demoLink ? "_blank" : "_self"}
-              rel="noopener noreferrer"
-              className="flex-1 text-center bg-[#ed7b49] text-white font-semibold py-3 px-6 rounded-full hover:bg-opacity-80 transition-colors duration-200"
-            >
-              {project.demoLink ? "Live Demo" : "Recorded Demo"}
-            </a>
-            {project.repoLink && (
-              <a
-                href={project.repoLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 text-center bg-[#202525] text-white font-semibold py-3 px-6 rounded-full hover:bg-opacity-80 transition-colors duration-200"
-              >
-                View Code
-              </a>
-            )}
-          </div>
+          {hasProjectLinks && (
+            <div className="flex flex-col gap-4 md:flex-row">
+              {(demoLink || videoLink) && (
+                <a
+                  href={demoLink || videoLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 rounded-full bg-[#ed7b49] px-6 py-3 text-center font-semibold text-white transition-colors duration-200 hover:bg-opacity-80"
+                >
+                  {demoLink
+                    ? project.demoLabel || 'Live Demo'
+                    : 'Recorded Demo'}
+                </a>
+              )}
+              {project.repoLink && (
+                <a
+                  href={project.repoLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 text-center bg-[#202525] text-white font-semibold py-3 px-6 rounded-full hover:bg-opacity-80 transition-colors duration-200"
+                >
+                  View Code
+                </a>
+              )}
+            </div>
+          )}
         </div>
       </div>
     </div>
