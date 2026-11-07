@@ -91,16 +91,16 @@ const rawProjectsData: Project[] = [
   {
     id: 5,
     title: "Premier League Match Predictor",
-    startDate: "2025-04-01",
+    startDate: "2026-08-01",
     images: ["/soccer.png"],
     description:
-      "Worked with my brother to build a discord bot that gets premier league matches from an API and allows users to predict the outcomes. After the matches are played, the bot updates the users with the results and their prediction accuracy. I built the machine learning model to predict the match outcomes based on a variety of features.",
-    technologies: ["Python", "Scikit-learn", "RESTful API"],
-    demoLink: "#",
-    repoLink: "https://github.com/jaceiverson/pl-discord-bot.git",
-    type: "Group",
+      "A reproducible machine-learning pipeline that syncs Premier League results from FotMob, combines them with historical match data, and predicts the next matchweek with home, draw, and away probabilities.",
+    technologies: ["Python", "Scikit-learn", "Pandas", "Parquet", "FotMob API"],
+    repoLink: "https://github.com/porteriverson/match-predictor",
+    type: "Personal",
+    status: "In Progress",
     contributions:
-      "Developed a machine learning model to predict match outcomes based on 12 features, working on integrating it with the discord bot.",
+      "Built the data synchronization, feature engineering, prematch snapshotting, model training, and weekly prediction workflow while keeping API requests cacheable and reproducible.",
   },
   {
     id: 6,
@@ -133,7 +133,7 @@ const rawProjectsData: Project[] = [
       "https://vxxoyghhxvuwltfkegva.supabase.co/storage/v1/object/public/portfolio-photos/elephrend-settings.jpeg",
     ],
     description:
-      "A mobile app that solves a personal problem. Elephrend helps me remember important details about the people I care about. This is a voice-first personal CRM that generates gift ideas, interaction summaries, and special event reminders/messages so you never miss a special occasion. Currently being beta tested in iOS TestFlight.",
+      "A voice-first personal relationship assistant for iPhone. Elephrend helps people remember birthdays, important moments, conversations, and thoughtful gift ideas while keeping their data local to their device.",
     technologies: [
       "React Native",
       "Supabase",
@@ -142,10 +142,12 @@ const rawProjectsData: Project[] = [
       "RevenueCat",
       "App Store Connect",
     ],
-    video: "",
-    // repoLink: "",
+    demoLink: "https://elephrend.com",
+    demoLabel: "Visit Website",
     type: "Personal",
-    contributions: "",
+    status: "Live",
+    contributions:
+      "Designed and built the iOS app, App Store release workflow, privacy-first local data model, voice capture experience, product analytics, subscriptions, and marketing website.",
   },
   {
     id: 8,
@@ -206,6 +208,78 @@ const rawProjectsData: Project[] = [
       "https://drive.google.com/file/d/1wL5sPemqiJfTKudfR7ViDDURllUMTxQ4/view?usp=sharing",
     type: "Group",
     contributions: "I managed the AI system that generated code for this project.",
+  },
+  {
+    id: 11,
+    title: "Side Quest Society",
+    startDate: "2026-10-01",
+    images: ["/projects/side-quest-society.png"],
+    description:
+      "An interactive learning platform that replaces slide-based training with story-driven quests, challenges, and practical decisions. Organizations can distribute access codes, manage seats, and track learner progress.",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Supabase",
+      "SCORM",
+      "Vercel",
+    ],
+    demoLink: "https://side-quest-society.vercel.app",
+    demoLabel: "Visit Website",
+    type: "Personal",
+    status: "Live",
+    contributions:
+      "Built the responsive product experience, guest and authenticated progress, organization access-code entitlements, seat limits, and a SCORM 1.2 packaging workflow.",
+  },
+  {
+    id: 12,
+    title: "Kate Iverson Media",
+    startDate: "2026-09-01",
+    images: ["/projects/kate-media.png"],
+    description:
+      "A portfolio and inquiry website for a short-form video and social media management business, paired with a private operations dashboard for managing clients, invoices, and contracts.",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Supabase",
+      "Stripe",
+      "Documenso",
+    ],
+    repoLink: "https://github.com/porteriverson/Kate-media",
+    type: "Professional",
+    status: "In Progress",
+    contributions:
+      "Created an editable content system, click-to-load video portfolio, accessible marketing pages, authenticated admin tools, and integrations for invoicing and contracts.",
+  },
+  {
+    id: 13,
+    title: "Swipe Cleaner",
+    startDate: "2026-08-01",
+    images: ["/projects/swipe-cleaner.svg"],
+    description:
+      "An on-device iPhone cleanup prototype that lets people review photos, videos, contacts, and selected files one item at a time before committing any destructive changes.",
+    technologies: ["React Native", "Expo", "TypeScript", "NativeWind", "Jest"],
+    repoLink: "https://github.com/porteriverson/swipe-cleaner",
+    type: "Personal",
+    status: "Prototype",
+    contributions:
+      "Built a review-first deletion flow with explicit confirmation, permission-aware media access, contact restore backups, accessibility support, and no backend or tracking SDKs.",
+  },
+  {
+    id: 14,
+    title: "House Search Ranker",
+    startDate: "2026-04-01",
+    images: ["/projects/house-searching.svg"],
+    description:
+      "A Python utility that gathers local real-estate listings, normalizes property details, and ranks homes using value, price-per-square-foot, space, and lot-size criteria.",
+    technologies: ["Python", "Pandas", "REST API", "Data Analysis"],
+    repoLink: "https://github.com/porteriverson/house-searching",
+    type: "Personal",
+    status: "Utility",
+    featured: false,
+    contributions:
+      "Implemented API ingestion, defensive response parsing, scoring rules, ranking, CSV export, and a concise command-line summary of the strongest matches.",
   },
 ];
 

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Swipe Cleaner</title>
+  <desc id="desc">A phone interface showing swipe controls for reviewing photos before deletion.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="photo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset=".55" stop-color="#818cf8"/>
+      <stop offset="1" stop-color="#f472b6"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="22" stdDeviation="22" flood-color="#020617" flood-opacity=".55"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="675" fill="url(#background)"/>
+  <circle cx="104" cy="96" r="190" fill="#38bdf8" opacity=".08"/>
+  <circle cx="1110" cy="620" r="260" fill="#f472b6" opacity=".08"/>
+  <g transform="translate(130 160)">
+    <text fill="#f8fafc" font-family="ui-sans-serif, system-ui, sans-serif" font-size="72" font-weight="800">Swipe Cleaner</text>
+    <text y="70" fill="#cbd5e1" font-family="ui-sans-serif, system-ui, sans-serif" font-size="27">Review first. Delete with confidence.</text>
+    <g transform="translate(0 150)">
+      <rect width="196" height="54" rx="27" fill="#ef4444" opacity=".16"/>
+      <text x="98" y="36" text-anchor="middle" fill="#fca5a5" font-family="ui-sans-serif, system-ui, sans-serif" font-size="21" font-weight="700">ê DELETE</text>
+      <rect x="216" width="172" height="54" rx="27" fill="#22c55e" opacity=".16"/>
+      <text x="302" y="36" text-anchor="middle" fill="#86efac" font-family="ui-sans-serif, system-ui, sans-serif" font-size="21" font-weight="700">KEEP í</text>
+    </g>
+    <text y="292" fill="#94a3b8" font-family="ui-sans-serif, system-ui, sans-serif" font-size="20">Photos ∑ Videos ∑ Contacts ∑ Files</text>
+    <text y="332" fill="#94a3b8" font-family="ui-sans-serif, system-ui, sans-serif" font-size="20">On-device ∑ Private ∑ Reviewable</text>
+  </g>
+  <g transform="translate(755 62)" filter="url(#shadow)">
+    <rect width="310" height="552" rx="54" fill="#020617" stroke="#475569" stroke-width="3"/>
+    <rect x="19" y="19" width="272" height="514" rx="39" fill="#f8fafc"/>
+    <rect x="107" y="30" width="96" height="22" rx="11" fill="#020617"/>
+    <text x="45" y="92" fill="#0f172a" font-family="ui-sans-serif, system-ui, sans-serif" font-size="23" font-weight="800">Review</text>
+    <text x="262" y="91" text-anchor="end" fill="#64748b" font-family="ui-sans-serif, system-ui, sans-serif" font-size="16">12 of 48</text>
+    <rect x="41" y="119" width="228" height="286" rx="25" fill="url(#photo)"/>
+    <circle cx="98" cy="188" r="34" fill="#fef3c7" opacity=".85"/>
+    <path d="M42 344l65-80 48 49 34-39 80 92v39H42z" fill="#0f172a" opacity=".42"/>
+    <rect x="59" y="431" width="78" height="78" rx="39" fill="#fee2e2"/>
+    <path d="M91 454l14 14m0-14l-14 14" stroke="#ef4444" stroke-width="7" stroke-linecap="round"/>
+    <rect x="173" y="431" width="78" height="78" rx="39" fill="#dcfce7"/>
+    <path d="M195 469l12 12 23-28" fill="none" stroke="#22c55e" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
